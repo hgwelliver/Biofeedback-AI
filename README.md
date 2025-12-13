@@ -5,17 +5,16 @@ Users can locate the area of the body where there is ache, tension, warmth, numb
 ## Screenshots
 
 ### Home
-![Home screen](screenshots/LandingPageWithSelections.png)
-![Home form](screenshots/HomeForm.png)
+![Home screen](https://github.com/hgwelliver/somatic-echoes/blob/main/screenshots/LandingPageWithSelections.PNG)
 
 ### Energy + Context Selection
-![Dropdowns](screenshots/OutputCard.png)
+![Dropdowns](https://github.com/hgwelliver/somatic-echoes/blob/main/screenshots/OutputCard.PNG)
 
 ### AI Interpretation Output
-![Loading](screenshots/AI Loading.png)
-![Output1](screenshots/AI Output.png)
-![Output2](screenshots/AI Output 1.png)
-![Output3](screenshots/AI Output 2.png)
+![Loading](https://github.com/hgwelliver/somatic-echoes/blob/main/screenshots/AI%20Loading.PNG)
+![Output1](https://github.com/hgwelliver/somatic-echoes/blob/main/screenshots/AI%20Output.PNG)
+![Output2](https://github.com/hgwelliver/somatic-echoes/blob/main/screenshots/AI%20Output%202.PNG)
+![Output3](https://github.com/hgwelliver/somatic-echoes/blob/main/screenshots/AI%20Output%203.PNG)
 
 This app requires an API key to run. 
 
