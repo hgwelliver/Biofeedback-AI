@@ -1,0 +1,184 @@
+.App {
+  font-family:monospace;
+  max-width: 600px;
+  margin: 2rem auto;
+  padding: 1rem;
+  background-color:lavender;
+  border-radius: 10px;
+}
+
+h1 {
+  text-align: center;
+  color: black;
+  font-family: monospace;
+}
+
+form {
+  border: transparent;
+  padding: 1rem;
+  border-radius: 10px;
+  margin-bottom: 1rem;
+}
+
+.output-card {
+  border: 2px solid #aaa;
+  padding: 1rem;
+  border-radius: 10px;
+  background-color: #EDF2F7;
+}
+
+.se-silhouette {
+  fill: rgba(235, 242, 240, 0.92);
+  stroke: rgba(120, 140, 135, 0.55);
+  stroke-width: 15;
+  width: 320px;
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+}
+
+/* Somatic Echoes aesthetic */
+.se-mapWrap {
+  margin: 18px 0 8px;
+  padding: 16px 16px 10px;
+  border: 1px solid rgba(90, 120, 115, 0.18);
+  border-radius: 18px;
+  background: rgba(240, 247, 245, 0.7);
+  backdrop-filter: blur(6px);
+}
+
+.se-mapHeader {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  align-items: flex-start;
+  margin-bottom: 10px;
+}
+
+.se-title {
+  font-size: 16px;
+  letter-spacing: 0.2px;
+  font-weight: 650;
+}
+
+.se-subtitle {
+  font-size: 13px;
+  opacity: 0.8;
+  margin-top: 4px;
+}
+
+.se-muted {
+  opacity: 0.75;
+}
+
+.se-pill {
+  font-size: 12px;
+  padding: 8px 10px;
+  border-radius: 999px;
+  border: 1px solid rgba(90, 120, 115, 0.22);
+  background: rgba(255, 255, 255, 0.7);
+  white-space: nowrap;
+}
+
+/* SVG layout */
+.se-bodySvg {
+  width: 100%;
+  height: auto;
+  display: block;
+  stroke-width: 110;
+  margin: 10px auto 8px;
+}
+
+/* base silhouette */
+.se-silhouette {
+  fill: rgba(235, 242, 240, 0.95);
+  stroke: rgba(120, 140, 135, 0.55);
+  stroke-width: 5;
+}
+
+@keyframes se-pulse {
+  0% { opacity: 0.55; }
+  50% { opacity: 0.95; }
+  100% { opacity: 0.55; }
+}
+
+.se-dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 999px;
+  background: rgba(110, 200, 175, 0.75);
+  display: inline-block;
+  box-shadow: 0 0 12px rgba(110, 200, 175, 0.45);
+}
+
+.se-regions { opacity: 0.95; }
+
+.se-region {
+  stroke-width: 5;
+  cursor: pointer;
+  transition: fill 160ms ease, filter 160ms ease, stroke 160ms ease;
+}
+
+.se-region.is-hover {
+  fill: rgba(125, 60, 105, 0.55);
+  filter: drop-shadow(0 0 14px rgba(180, 120, 165, 0.55));
+}
+
+.se-region.is-active {
+  fill: rgba(125, 60, 105, 0.8);
+  filter: drop-shadow(0 0 18px rgba(180, 120, 165, 0.65));
+}
+
+.app-footer {
+  font-size: 0.8rem;
+  opacity: 0.6;
+  text-align: right;
+}
+
+#dropdowngroup select {
+  width: 100%;
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+
+  background-color: #edf2f7;
+  border: 1px solid rgba(0, 0, 0, 0.08);
+  border-radius: 12px;
+
+  padding: 12px 40px 12px 14px;
+  font-size: 0.95rem;
+  font-family: monospace;
+  color: #1a1a1a;
+
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+#dropdowngroup option {
+  background-color: #f4f7fb;
+  color: #1a1a1a;
+  padding: 10px;
+  font-size: 4rem;
+}
+
+#dropdowngroup button {
+  background-color: #d9e3ec;
+  border: 1px solid rgba(0, 0, 0, 0.08);
+  border-radius: 12px;
+
+  padding: 12px 14px 12px 14px;
+  font-size: 0.95rem;
+  font-family: monospace;
+  color: #1a1a1a;
+
+  cursor: pointer;
+  transition: all 0.2s ease;
+  
+  display: block;
+  margin: 16px auto;
+  text-align: center;
+}
+
+
+
