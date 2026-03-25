@@ -22,8 +22,8 @@ function BodyMapForm({ onSubmit }) {
     <form onSubmit={handleSubmit}>
       <MeridianBodyMap value={region} onChange={setRegion} showMeridians />
 
-      <h2>What does it feel like?</h2>
-      {["Tight", "Heavy", "Buzzing", "Numb", "Warm", "Cold", "Fluttery", "Achy"].map((s) => (
+      <h2>What are your symptoms?</h2>
+      {["Tight", "Sore", "Buzzing", "Numb", "Warm", "Cold", "Stiff", "Achy"].map((s) => (
         <label key={s} style={{ display: "inline-block", marginRight: 10 }}>
           <input
             type="checkbox"
@@ -35,21 +35,12 @@ function BodyMapForm({ onSubmit }) {
       ))}
 
     <div id="dropdowngroup">
-      <h2>Energy Level</h2>
+      <h2>General Body Energy Level</h2>
       <select value={energy} onChange={(e) => setEnergy(e.target.value)}>
         <option value="">Select...</option>
-        <option value="Wired">Wired / Agitated</option>
-        <option value="Heavy">Heavy / Collapsed</option>
-        <option value="Mixed">Mixed</option>
-      </select>
-
-      <h2>Context</h2>
-      <select value={context} onChange={(e) => setContext(e.target.value)}>
-        <option value="">Select...</option>
-        <option value="Social">Social</option>
-        <option value="Alone">Alone</option>
-        <option value="Creative Work">Creative Work</option>
-        <option value="Before Sleep">Before Sleep</option>
+        <option value="Energized">Energized</option>
+        <option value="Tired">Tired</option>
+        <option value="Both">Both</option>
       </select>
 
       <button type="submit" style={{ marginTop: 12 }}>

@@ -5,7 +5,7 @@ function OutputCard({ result }) {
 
   return (
     <div className="output-card">
-      <h2>Somatic Echoes Interpretation</h2>
+      <h2>Biofeedback AI Interpretation</h2>
 
       <p>
         <strong>AI Interpretation:</strong> {result.interpretation}

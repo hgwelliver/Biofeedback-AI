@@ -21,28 +21,28 @@ function App() {
 
     try {
       const prompt = `
-You are a gentle somatic interpreter. 
+You are an anatomy, neuroscience, and physiology specialist. 
+This is a human-guided system for translating internal body signals into actionable movement, recovery, and regulation insights.
 Interpret the following body sensations and energy context. 
 Do NOT provide medical advice. Provide:
 - A short interpretation of the sensations
-- 3 gentle and regulating actions
-- use Chinese medicine–inspired pattern language
+- 3 gentle and regulating exercises
+- use scientific, anatomy, neuroscience, and physical therapy language
 
 Body sensations: ${data.sensations.join(", ")}
 Energy level: ${data.energy}
-Context: ${data.context}
 Body region: ${data.region}
 Sensations: ${data.sensations.join(", ")}
 
 Respond in EXACTLY this format:
 
 Interpretation:
-A short, compassionate interpretation of what these sensations may reflect.
+An interpretation of what these body sensations may reflect.
 
 Recommended Actions:
-1. A gentle, non-medical regulating action (somatic or breath-based)
-2. A second gentle regulating action (movement, touch, or attention-based)
-3. A third gentle regulating action (rest, visualization, or environmental)
+1. A gentle exercise
+2. A second gentle exercise (movement, touch, or attention-based)
+3. A third gentle exercise (rest, situational, or environmental)
 
 Do not include anything else.
 `;
@@ -76,9 +76,9 @@ Do not include anything else.
       );
 
       let actions = [
-          "First gentle regulating action",
-          "Second gentle regulating action",
-          "Third gentle regulating action"
+          "First gentle exercise",
+          "Second gentle exercise",
+          "Third gentle exercise"
         ];
 
       if (actionsMatch) {
@@ -104,7 +104,7 @@ Do not include anything else.
 
   return (
     <div className="App">
-      <h1>Somatic Echoes</h1>
+      <h1>Biofeedback Artificial Intelligence</h1>
       <BodyMapForm onSubmit={handleSubmit} />
       {loading ? <p>Loading AI interpretation...</p> : <OutputCard result={result} />}
       <footer className="app-footer">
