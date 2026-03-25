@@ -1,20 +1,12 @@
-## Somatic Echoes is an AI-powered somatic intelligence application.
+## Somatic Echoes is an AI-powered anatomical feedback application.
 
-Users can locate the area of the body where there is ache, tension, warmth, numbness, and a variety of other symptoms. After making selections about energy level and context, AI will consolidate an answer rooted in yoga philosophy and chinese medicine. 
-
-## Screenshots
+Users can locate the area of the body where there is ache, tension, warmth, numbness, and a variety of other symptoms. After making selections about energy level and context, AI will consolidate an answer rooted in physical therapy and anatomy. 
 
 ### Home
-![Home screen](https://github.com/hgwelliver/somatic-echoes/blob/main/screenshots/LandingPageWithSelections.PNG)
 
 ### Energy + Context Selection
-![Dropdowns](https://github.com/hgwelliver/somatic-echoes/blob/main/screenshots/OutputCard.PNG)
 
 ### AI Interpretation Output
-![Loading](https://github.com/hgwelliver/somatic-echoes/blob/main/screenshots/AI%20Loading.PNG)
-![Output1](https://github.com/hgwelliver/somatic-echoes/blob/main/screenshots/AI%20Output.PNG)
-![Output2](https://github.com/hgwelliver/somatic-echoes/blob/main/screenshots/AI%20Output%202.PNG)
-![Output3](https://github.com/hgwelliver/somatic-echoes/blob/main/screenshots/AI%20Output%203.PNG)
 
 This app requires an API key to run. 
 
