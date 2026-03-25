@@ -1,4 +1,4 @@
-## Somatic Echoes is an AI-powered anatomical feedback application.
+## An AI-powered anatomical feedback application.
 
 Users can locate the area of the body where there is ache, tension, warmth, numbness, and a variety of other symptoms. After making selections about energy level and context, AI will consolidate an answer rooted in physical therapy and anatomy. 
 
