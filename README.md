@@ -2,7 +2,7 @@
 
 Users can locate the area of the body where there is ache, tension, warmth, numbness, and a variety of other symptoms. After making selections about energy level and context, AI will consolidate an answer rooted in physical therapy and anatomy. 
 
-<img width="361" height="613" alt="image" src="https://github.com/user-attachments/assets/773ac52f-2b51-4194-a4c9-63612886312c" />
+<img width="1140" height="798" alt="image" src="https://github.com/user-attachments/assets/b9db839c-533d-47f9-91c0-b652140528ba" />
 
 ### AI Interpretation Output
 
