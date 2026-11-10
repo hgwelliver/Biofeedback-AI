@@ -16,6 +16,10 @@ This app requires an API key to run.
 
 3. Create a .env file in the root
 
-4. Add your OpenAI API key to .env
+4. Add your OpenAI API key to `.env`:
+
+   ```env
+   VITE_OPENAI_API_KEY=your_openai_api_key
+   ```
 
 5. npm run dev

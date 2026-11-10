@@ -34,8 +34,6 @@ const SILHOUETTE = {
 export default function MeridianBodyMap({ value, onChange }) {
   const [hovered, setHovered] = useState(null);
 
-  const label = value ? value.replaceAll("_", " ") : "No region selected";
-
   return (
     <div className="se-mapWrap">
       <div className="se-mapHeader">
@@ -45,8 +43,6 @@ export default function MeridianBodyMap({ value, onChange }) {
             Hover to preview. Click to select.{" "}
           </div>
         </div>
-
-        <div className="se-pill">{label}</div>
       </div>
 
       <svg
@@ -66,21 +62,37 @@ export default function MeridianBodyMap({ value, onChange }) {
 
         {/* Regions */}
         <g className="se-regions">
-          {REGION_PATHS.map((r) => (
-            <path
+          {REGION_PATHS.map((r) => {
+            const outerPath = r.d.slice(0, r.d.indexOf("z") + 1);
+            const className = [
+              "se-region-group",
+              hovered === r.id ? "is-hover" : "",
+              value === r.id ? "is-active" : "",
+            ].join(" ");
+
+            return (
+            <g
               key={r.id}
-              d={r.d}
               transform={r.transform}
-              className={[
-                "se-region",
-                hovered === r.id ? "is-hover" : "",
-                value === r.id ? "is-active" : "",
-              ].join(" ")}
+              className={className}
+              role="button"
+              tabIndex="0"
+              aria-label={`Select ${r.id.replaceAll("_", " ")}`}
               onMouseEnter={() => setHovered(r.id)}
               onMouseLeave={() => setHovered(null)}
               onClick={() => onChange?.(r.id)}
-            />
-          ))}
+              onKeyDown={(event) => {
+                if (event.key === "Enter" || event.key === " ") {
+                  event.preventDefault();
+                  onChange?.(r.id);
+                }
+              }}
+            >
+              <path className="se-region-fill" d={outerPath} />
+              <path className="se-region" d={r.d} />
+            </g>
+            );
+          })}
         </g>
       </svg>
     </div>
