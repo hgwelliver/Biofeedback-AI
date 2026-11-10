@@ -272,7 +272,7 @@ input:focus-visible {
   font-size: clamp(2rem, 5vw, 3rem);
 }
 
-.settings-modal-heading p,
+.settings-section-heading p,
 .theme-setting p {
   margin: 0;
   color: #77717d;
@@ -280,8 +280,20 @@ input:focus-visible {
   line-height: 1.55;
 }
 
-.settings-modal-heading p {
-  font-size: 0.86rem;
+.settings-section {
+  display: grid;
+  gap: 14px;
+}
+
+.settings-section-heading h3 {
+  margin: 0 0 5px;
+  color: #3d3945;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 0.92rem;
+}
+
+.settings-section-heading p {
+  font-size: 0.74rem;
 }
 
 .theme-setting {
@@ -338,6 +350,76 @@ input:focus-visible {
 
 .theme-switch[aria-checked="true"] span {
   transform: translateX(22px);
+}
+
+.ai-role-setting {
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+
+.ai-role-setting legend {
+  margin-bottom: 5px;
+  color: #3d3945;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 0.92rem;
+  font-weight: 600;
+}
+
+.ai-role-setting > p {
+  margin: 0;
+  color: #77717d;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 0.74rem;
+  line-height: 1.55;
+}
+
+.ai-role-options {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 12px;
+  margin-top: 14px;
+}
+
+.ai-role-option {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 11px;
+  align-items: flex-start;
+  padding: 16px;
+  border: 1px solid rgba(48, 44, 58, 0.12);
+  border-radius: 16px;
+  background: rgba(255, 252, 245, 0.72);
+  cursor: pointer;
+  transition: background 160ms ease, border-color 160ms ease;
+}
+
+.ai-role-option:has(input:checked) {
+  border-color: #9c7fc0;
+  background: #eee3f7;
+}
+
+.ai-role-option input {
+  margin: 2px 0 0;
+  accent-color: #765ca3;
+}
+
+.ai-role-option strong,
+.ai-role-option small {
+  display: block;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.ai-role-option strong {
+  color: #3d3945;
+  font-size: 0.8rem;
+}
+
+.ai-role-option small {
+  margin-top: 5px;
+  color: #77717d;
+  font-size: 0.68rem;
+  line-height: 1.45;
 }
 
 .brand-sparkle {
@@ -1056,6 +1138,94 @@ form {
   line-height: 1.5;
 }
 
+.herbal-traditions {
+  width: min(100%, 900px);
+  margin: 22px auto 0;
+  padding: 20px;
+  border: 1px solid rgba(95, 116, 77, 0.2);
+  border-radius: 20px;
+  background:
+    radial-gradient(circle at 100% 0, rgba(214, 188, 132, 0.2), transparent 34%),
+    rgba(239, 241, 220, 0.64);
+}
+
+.herbal-traditions-heading {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.herbal-traditions-heading > span {
+  display: grid;
+  flex: 0 0 34px;
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  background: #dce3bd;
+  color: #586846;
+  place-items: center;
+}
+
+.herbal-traditions-heading svg {
+  width: 20px;
+  height: 20px;
+}
+
+.herbal-traditions-heading p,
+.herbal-traditions-heading h2 {
+  margin: 0;
+}
+
+.herbal-traditions-heading p,
+.herbal-traditions-content span {
+  color: #71805d;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 0.65rem;
+  font-weight: 700;
+  letter-spacing: 0.07em;
+  text-transform: uppercase;
+}
+
+.herbal-traditions-heading h2 {
+  color: #3e4933;
+  font-size: 1.25rem;
+}
+
+.herbal-traditions-content {
+  display: grid;
+  grid-template-columns: minmax(140px, 0.8fr) repeat(2, minmax(0, 1.5fr));
+  gap: 12px;
+  margin-top: 16px;
+}
+
+.herbal-traditions-content article {
+  padding: 14px;
+  border: 1px solid rgba(95, 116, 77, 0.14);
+  border-radius: 14px;
+  background: rgba(253, 249, 240, 0.56);
+}
+
+.herbal-traditions-content h3,
+.herbal-traditions-content p {
+  margin: 7px 0 0;
+  color: #46513a;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 0.74rem;
+  line-height: 1.55;
+}
+
+.herbal-traditions-content h3 {
+  font-size: 0.82rem;
+}
+
+.herbal-safety-note {
+  margin: 14px 2px 0;
+  color: #5b654e;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 0.68rem;
+  line-height: 1.55;
+}
+
 .app-footer {
   display: flex;
   align-items: center;
@@ -1126,7 +1296,7 @@ form {
 [data-theme="dark"] .strength-scale,
 [data-theme="dark"] .interpretive-note,
 [data-theme="dark"] .app-footer,
-[data-theme="dark"] .settings-modal-heading p,
+[data-theme="dark"] .settings-section-heading p,
 [data-theme="dark"] .theme-setting p,
 [data-theme="dark"] .help-modal-intro p,
 [data-theme="dark"] .help-steps p {
@@ -1298,6 +1468,38 @@ form {
   color: #e6deed;
 }
 
+[data-theme="dark"] .herbal-traditions {
+  border-color: rgba(184, 197, 149, 0.18);
+  background:
+    radial-gradient(circle at 100% 0, rgba(149, 116, 65, 0.16), transparent 34%),
+    rgba(42, 48, 36, 0.7);
+}
+
+[data-theme="dark"] .herbal-traditions-heading > span {
+  background: #4a573c;
+  color: #d8e2bc;
+}
+
+[data-theme="dark"] .herbal-traditions-heading p,
+[data-theme="dark"] .herbal-traditions-content span {
+  color: #b6c397;
+}
+
+[data-theme="dark"] .herbal-traditions-heading h2,
+[data-theme="dark"] .herbal-traditions-content h3,
+[data-theme="dark"] .herbal-traditions-content p {
+  color: #e4ead5;
+}
+
+[data-theme="dark"] .herbal-traditions-content article {
+  border-color: rgba(201, 214, 170, 0.13);
+  background: rgba(31, 37, 27, 0.62);
+}
+
+[data-theme="dark"] .herbal-safety-note {
+  color: #c3cdb0;
+}
+
 [data-theme="dark"] .ai-interpretation {
   border-top-color: rgba(226, 216, 238, 0.14);
 }
@@ -1330,8 +1532,26 @@ form {
 }
 
 [data-theme="dark"] .help-steps h3,
-[data-theme="dark"] .theme-setting h3 {
+[data-theme="dark"] .theme-setting h3,
+[data-theme="dark"] .settings-section-heading h3,
+[data-theme="dark"] .ai-role-setting legend,
+[data-theme="dark"] .ai-role-option strong {
   color: #eee9f4;
+}
+
+[data-theme="dark"] .ai-role-setting > p,
+[data-theme="dark"] .ai-role-option small {
+  color: #aaa3b3;
+}
+
+[data-theme="dark"] .ai-role-option {
+  border-color: rgba(226, 216, 238, 0.15);
+  background: rgba(42, 36, 53, 0.88);
+}
+
+[data-theme="dark"] .ai-role-option:has(input:checked) {
+  border-color: #a98acb;
+  background: #4a385f;
 }
 
 [data-theme="dark"] .help-step-number {
@@ -1380,10 +1600,18 @@ form {
     grid-template-columns: 1fr;
   }
 
+  .herbal-traditions-content {
+    grid-template-columns: 1fr;
+  }
+
   .help-modal {
     grid-template-columns: 1fr;
     gap: 28px;
     padding: 54px 24px 28px;
+  }
+
+  .ai-role-options {
+    grid-template-columns: 1fr;
   }
 }
 

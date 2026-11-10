@@ -26,11 +26,19 @@ const SYMPTOM_GROUPS = [
   },
   {
     label: "Body state",
-    symptoms: ["Swollen", "Spacious"],
+    symptoms: ["Swollen", "Congested", "Bloated", "Spacious"],
   },
 ];
 
-const LOCATION_OPTIONS = ["Surface", "Muscle", "Joint", "Deep tissue", "Unsure"];
+const LOCATION_OPTIONS = [
+  "Surface",
+  "Muscle",
+  "Joint",
+  "Deep tissue",
+  "Inside",
+  "Outside",
+  "Unsure",
+];
 
 const REGION_GUIDANCE = {
   head: "Ease facial and scalp tension with slow breathing and gentle awareness.",
